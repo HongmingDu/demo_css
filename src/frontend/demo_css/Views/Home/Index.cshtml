@@ -1,31 +1,111 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css">
+        body {
+            background-image: url('../../Images/login.jpg');
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            color: white;
+            text-align: center;
+        }
+        p {
+            font-family: Arial,Verdana,Sans-serif;
+        }
+        .loginCss {
+            position: absolute;
+            left: 800px;
+            top: 350px;
+            background-color: white;
+            height: 370px;
+            width: 400px;
+            border-radius: 8px;
+        }
+        .titleCss {
+            position: absolute;
+            left: 825px;
+            top: 300px;
+            background-color: #4caf50;
+            height: 90px;
+            width: 350px;
+            border-radius: 8px;
+        }
+        .fontCss {
+            color: white;
+            text-align:center;
+            font-size:25px;
+            font-weight:500;
+        }
+        .lgnCss {
+            margin-left:40px;
+            margin-top:100px;
+        }
+        .inputCss {
+            width: 220px;
+            height: 30px;
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        }
+        .divLoginCss {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .iptLoginCss {
+            background-color: #4CAF50;
+            opacity: 0.85;
+            color: white;
+            width: 200px;
+            height: 35px;
+            font-weight: 500;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=text] {
+            border: 1.5px solid #ccc;
+        }
+        input:hover,
+        .btn:hover {
+            opacity: 1;
+        }
+    </style>
+    <script type="text/javascript">
+        function btnClick() {
+            window.location = '/Home/ProjectList';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div class="loginCss">
+            <div class="lgnCss">
+                <p>
+                    <span style="margin-right:50px;">Email: </span><input type="text" class="inputCss" placeholder="zhangsan@qq.com" />
+                </p>
+                <p>
+                    <span style="margin-right:20px;">Password: </span><input type="text" class="inputCss" placeholder="111" />
+                </p>
+                <div class="divLoginCss">
+                    <input type="button" class="iptLoginCss" value="LOGIN" onclick="btnClick();"/>
+                </div>
+            </div>
+        </div>
+        <div class="titleCss">
+            <p class="fontCss">Offore3</p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</body>
+</html>

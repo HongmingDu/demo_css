@@ -12,18 +12,8 @@ namespace demo_css.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult ProjectList() 
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
